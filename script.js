@@ -1,112 +1,62 @@
+```javascript
 // ================================
-// WAIT FOR PAGE TO LOAD
+// DARK / LIGHT MODE
 // ================================
 
-document.addEventListener("DOMContentLoaded", function () {
+const themeButton = document.getElementById("themeButton");
 
 
-    // ================================
-    // GET ELEMENTS
-    // ================================
+// Check if button exists
 
-    const themeButton = document.getElementById("themeButton");
+if (themeButton) {
 
-    const menuButton = document.getElementById("menuButton");
+    themeButton.addEventListener("click", function () {
 
-    const navLinks = document.getElementById("navLinks");
+        document.body.classList.toggle("light-mode");
 
 
-    // ================================
-    // DARK / LIGHT MODE
-    // ================================
+        // Light Mode
+
+        if (document.body.classList.contains("light-mode")) {
+
+            themeButton.textContent = "🌙";
+
+            localStorage.setItem("theme", "light");
+
+        }
+
+
+        // Dark Mode
+
+        else {
+
+            themeButton.textContent = "☀️";
+
+            localStorage.setItem("theme", "dark");
+
+        }
+
+    });
+
+}
+
+
+// ================================
+// LOAD SAVED THEME
+// ================================
+
+const savedTheme = localStorage.getItem("theme");
+
+
+if (savedTheme === "light") {
+
+    document.body.classList.add("light-mode");
 
     if (themeButton) {
 
-        themeButton.addEventListener("click", function () {
-
-            document.body.classList.toggle("light-mode");
-
-
-            if (document.body.classList.contains("light-mode")) {
-
-                themeButton.textContent = "🌙";
-
-                localStorage.setItem("theme", "light");
-
-            } else {
-
-                themeButton.textContent = "☀️";
-
-                localStorage.setItem("theme", "dark");
-
-            }
-
-        });
+        themeButton.textContent = "🌙";
 
     }
 
-
-    // ================================
-    // LOAD SAVED THEME
-    // ================================
-
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme === "light") {
-
-        document.body.classList.add("light-mode");
-
-        if (themeButton) {
-            themeButton.textContent = "🌙";
-        }
-
-    }
-
-
-    // ================================
-    // MOBILE MENU
-    // ================================
-
-    if (menuButton && navLinks) {
-
-        menuButton.addEventListener("click", function () {
-
-            navLinks.classList.toggle("show");
-
-
-            // Change menu icon
-
-            if (navLinks.classList.contains("show")) {
-
-                menuButton.textContent = "✕";
-
-            } else {
-
-                menuButton.textContent = "☰";
-
-            }
-
-        });
-
-
-        // ================================
-        // CLOSE MENU AFTER CLICK
-        // ================================
-
-        const menuItems = navLinks.querySelectorAll("a");
-
-        menuItems.forEach(function (item) {
-
-            item.addEventListener("click", function () {
-
-                navLinks.classList.remove("show");
-
-                menuButton.textContent = "☰";
-
-            });
-
-        });
-
-    }
-
-});
+}
+```
