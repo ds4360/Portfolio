@@ -2,51 +2,44 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Deepanshu Sagar | Web Developer</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- NAVBAR -->
 
     <nav class="navbar">
 
-        <div class="logo">
-            DS.
-        </div>
+        <div class="logo">DS.</div>
 
-        <div class="nav-links">
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
 
             <a href="#home">Home</a>
-
             <a href="#about">About</a>
-
             <a href="#skills">Skills</a>
-
             <a href="#projects">Projects</a>
-
             <a href="#contact">Contact</a>
+
+            <button class="theme-button" id="themeButton">
+                ☀️
+            </button>
 
         </div>
 
     </nav>
 
 
-
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
+    <!-- HERO -->
 
     <section id="home" class="hero">
 
@@ -65,35 +58,22 @@
             </h2>
 
             <p class="hero-text">
-                I build responsive and user-friendly websites
-                using HTML, CSS, JavaScript and modern web
-                technologies.
+                I build responsive, modern and user-friendly
+                websites using HTML, CSS, JavaScript and
+                modern web technologies.
             </p>
-
 
             <div class="hero-buttons">
 
-                <a
-                    href="#projects"
-                    class="primary-button"
-                >
+                <a href="#projects" class="primary-button">
                     View My Projects
                 </a>
 
-
-                <a
-                    href="#contact"
-                    class="secondary-button"
-                >
+                <a href="#contact" class="secondary-button">
                     Contact Me
                 </a>
 
-
-                <a
-                    href="resume.pdf"
-                    class="resume-button"
-                    download
-                >
+                <a href="resume.pdf" class="resume-button" download>
                     📄 Download Resume
                 </a>
 
@@ -121,10 +101,7 @@
     </section>
 
 
-
-    <!-- =========================
-         ABOUT SECTION
-    ========================== -->
+    <!-- ABOUT -->
 
     <section id="about" class="section">
 
@@ -173,28 +150,13 @@
             <div class="about-box">
 
                 <div>
-
-                    <strong>
-                        3+
-                    </strong>
-
-                    <span>
-                        Projects
-                    </span>
-
+                    <strong>3+</strong>
+                    <span>Projects</span>
                 </div>
 
-
                 <div>
-
-                    <strong>
-                        8+
-                    </strong>
-
-                    <span>
-                        Technologies
-                    </span>
-
+                    <strong>8+</strong>
+                    <span>Technologies</span>
                 </div>
 
             </div>
@@ -204,10 +166,7 @@
     </section>
 
 
-
-    <!-- =========================
-         SKILLS SECTION
-    ========================== -->
+    <!-- SKILLS -->
 
     <section id="skills" class="section skills-section">
 
@@ -226,47 +185,28 @@
 
         <div class="skills-grid">
 
-            <div class="skill-card">
-                <span>HTML5</span>
-            </div>
+            <div class="skill-card">HTML5</div>
 
-            <div class="skill-card">
-                <span>CSS3</span>
-            </div>
+            <div class="skill-card">CSS3</div>
 
-            <div class="skill-card">
-                <span>JavaScript</span>
-            </div>
+            <div class="skill-card">JavaScript</div>
 
-            <div class="skill-card">
-                <span>Bootstrap</span>
-            </div>
+            <div class="skill-card">Bootstrap</div>
 
-            <div class="skill-card">
-                <span>PHP</span>
-            </div>
+            <div class="skill-card">PHP</div>
 
-            <div class="skill-card">
-                <span>MySQL</span>
-            </div>
+            <div class="skill-card">MySQL</div>
 
-            <div class="skill-card">
-                <span>Git</span>
-            </div>
+            <div class="skill-card">Git</div>
 
-            <div class="skill-card">
-                <span>GitHub</span>
-            </div>
+            <div class="skill-card">GitHub</div>
 
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         PROJECTS SECTION
-    ========================== -->
+    <!-- PROJECTS -->
 
     <section id="projects" class="section">
 
@@ -300,8 +240,7 @@
 
                 <p>
                     Responsive weather application built
-                    using HTML, CSS and JavaScript with
-                    a clean and user-friendly interface.
+                    using HTML, CSS and JavaScript.
                 </p>
 
                 <div class="project-tech">
@@ -312,7 +251,6 @@
                     href="https://ds4360.github.io/weather-app/"
                     class="project-link"
                     target="_blank"
-                    rel="noopener noreferrer"
                 >
                     Live Demo →
                 </a>
@@ -320,8 +258,7 @@
             </div>
 
 
-
-            <!-- STUDENT MANAGEMENT SYSTEM -->
+            <!-- STUDENT MANAGEMENT -->
 
             <div class="project-card">
 
@@ -334,9 +271,9 @@
                 </h3>
 
                 <p>
-                    Responsive student management application
-                    with Add, Edit, Delete, Search,
-                    Validation and LocalStorage.
+                    Student management application with
+                    Add, Edit, Delete, Search, Validation
+                    and LocalStorage.
                 </p>
 
                 <div class="project-tech">
@@ -347,7 +284,6 @@
                     href="https://ds4360.github.io/student-management-system/"
                     class="project-link"
                     target="_blank"
-                    rel="noopener noreferrer"
                 >
                     Live Demo →
                 </a>
@@ -355,8 +291,7 @@
             </div>
 
 
-
-            <!-- PHP LOGIN SYSTEM -->
+            <!-- PHP LOGIN -->
 
             <div class="project-card">
 
@@ -382,7 +317,6 @@
                     href="https://github.com/ds4360/php-login-authentication-system"
                     class="project-link"
                     target="_blank"
-                    rel="noopener noreferrer"
                 >
                     View on GitHub →
                 </a>
@@ -394,10 +328,7 @@
     </section>
 
 
-
-    <!-- =========================
-         CONTACT SECTION
-    ========================== -->
+    <!-- CONTACT -->
 
     <section id="contact" class="section contact-section">
 
@@ -426,35 +357,27 @@
             </p>
 
 
-            <!-- GMAIL EMAIL BUTTON -->
-
             <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=ds4360731@gmail.com"
                 class="primary-button"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 📧 Send Email
             </a>
 
-
-            <!-- SOCIAL LINKS -->
 
             <div class="social-links">
 
                 <a
                     href="https://github.com/ds4360"
                     target="_blank"
-                    rel="noopener noreferrer"
                 >
                     GitHub
                 </a>
 
-
                 <a
                     href="https://www.linkedin.com/in/deepanshu-sagar-896280331"
                     target="_blank"
-                    rel="noopener noreferrer"
                 >
                     LinkedIn
                 </a>
@@ -466,10 +389,7 @@
     </section>
 
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -480,6 +400,7 @@
     </footer>
 
 
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
